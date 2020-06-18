@@ -276,7 +276,7 @@ impl Client {
         tx.set_data(data);
 
         tx.set_nonce(encode(Uuid::new_v4().as_bytes()));
-        tx.set_valid_until_block(current_height + 200);
+        tx.set_valid_until_block(current_height + 500);
         tx.set_quota(transaction_options.quota().unwrap_or_else(|| 10_000_000));
         let value = transaction_options
             .value()
